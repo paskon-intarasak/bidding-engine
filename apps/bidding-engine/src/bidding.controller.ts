@@ -7,7 +7,7 @@ import {
   Post,
 } from '@nestjs/common';
 import { BiddingService } from './bidding.service';
-import { AuctionGateway } from './gateway/auction.gateway';
+import { AuctionGateway } from '../../../libs/common/src/auctiongateway/auction.gateway';
 
 @Controller('bidding')
 export class BiddingController {

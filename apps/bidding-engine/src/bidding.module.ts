@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
 import { BiddingController } from './bidding.controller';
 import { BiddingService } from './bidding.service';
-import { GatewayModule } from './gateway/gateway.module';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
+import { AuctionGateway } from '@app/common';
 
 @Module({
   imports: [
-    GatewayModule,
+    AuctionGateway,
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
