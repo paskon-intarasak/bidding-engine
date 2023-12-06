@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
+import { AuctionGateway } from './auction.gateway';
 
-@Module({})
+@Module({
+  providers: [AuctionGateway],
+  exports: [AuctionGateway],
+})
 export class AuctiongatewayModule {}
